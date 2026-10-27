@@ -1,0 +1,8 @@
+# automatic activation of ethernet number 1 at start
+auto eth1
+# iface = interface, command to configure a network interface
+# inet = configuration using IPv4
+# static = the IP address is defined manually
+iface eth1 inet static
+	address 30.1.1.1
+	netmask 255.255.255.0

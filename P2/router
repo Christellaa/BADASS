@@ -1,0 +1,10 @@
+FROM frrouting/frr:v8.4.1
+RUN apk update && apk add --no-cache iproute2 bash
+
+COPY daemons /etc/frr/daemons
+COPY sysctl.conf /etc/sysctl.conf
+COPY entrypoint.sh /etc/frr/entrypoint.sh
+
+RUN chmod +x /etc/frr/entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "/etc/frr/entrypoint.sh"]
