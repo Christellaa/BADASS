@@ -1,0 +1,22 @@
+# automatically activate the network interface at start
+auto eth0
+# define the IP address manually in IPv4
+iface eth0 inet static
+	address 10.1.1.1
+	netmask 255.255.255.252
+
+auto eth1
+iface eth1 inet static
+	address 10.1.1.5
+	netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+	address 10.1.1.9
+	netmask 255.255.255.252
+
+# lo = loopback = local loop = the machine can communicate with itself without network
+auto lo
+iface lo inet static
+	address 1.1.1.1
+	netmask 255.255.255.255

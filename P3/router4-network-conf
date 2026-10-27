@@ -1,0 +1,11 @@
+# automatically activate the network interface at start
+auto eth2
+# define the IP address manually in IPv4
+iface eth2 inet static
+	address 10.1.1.10
+	netmask 255.255.255.252
+
+auto lo
+iface lo inet static
+	address 1.1.1.4
+	netmask 255.255.255.255
